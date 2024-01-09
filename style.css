@@ -7,28 +7,32 @@
   font-family: 'Poppins', sans-serif;
 }
 body{
-  display: flex;
-  align-items: center;
-  padding: 0 10px;
-  justify-content: center;
-  min-height: 100vh;
   background: #fe2b7c;
   background-image: url(background.jpg);
+  background-size: 200vmax;
 }
-.wrapper{
+
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+}
+.calender-wrapper{
   width: 450px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
-.wrapper header{
+.calender-wrapper header{
   display: flex;
   align-items: center;
   padding: 25px 30px 10px;
   justify-content: space-between;
 }
 header .icons{
-  display: flex;
+  display: inline;
 }
 header .icons span{
   height: 38px;
@@ -102,13 +106,16 @@ header .current-date{
 .days li:not(.active):hover::before{
   background: #f2f2f2;
 }
-footer {
+.footer {
   background-color: #ff3a65;
   color: #EEEEEE;
   text-align: center;
   padding: 1% 0;
-  position: fixed;
-  bottom: 0px;
   width: 100% ;
-  font-family: 'Tilt Neon', sans-serif;
+}
+
+@media all and (max-width: 300px) {
+  * {
+    font-size: 12px;
+  }
 }
